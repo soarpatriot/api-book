@@ -3,7 +3,6 @@
     "description": "This is a about how to write apis",
     "extension": null,
     "generator": "site",
-    "isbn": null,
     "links": {
         "sharing": {
             "all": null,
@@ -30,7 +29,18 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": [],
-    "title": "Sample GitBook",
-    "variables": {}
+    "plugins": ["expandable-chapters",
+                "book-summary-scroll-position-saver",
+                "anchors",
+                "multipart",
+                "codeblock-filename",
+                "prism",
+                "-highlight"
+                ],
+    "title": "build Apis",
+    "engines": {
+     "gitbook": "*"
+    },
+    "variables": {
+    }
 }
