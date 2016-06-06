@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>input · build Apis</title>
+        <title>negotiation · build Apis</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="output.html" />
+    <link rel="next" href="../version.html" />
     
     
-    <link rel="prev" href="../input-and-output.html" />
+    <link rel="prev" href="intro.html" />
     
 
     </head>
@@ -238,9 +238,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="input.html">
+        <li class="chapter " data-level="1.3.1" data-path="../input-output/input.html">
             
-                <a href="input.html">
+                <a href="../input-output/input.html">
             
                     
                     input
@@ -251,9 +251,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="output.html">
+        <li class="chapter " data-level="1.3.2" data-path="../input-output/output.html">
             
-                <a href="output.html">
+                <a href="../input-output/output.html">
             
                     
                     output
@@ -463,9 +463,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../hateoas/intro.html">
+        <li class="chapter " data-level="1.11.1" data-path="intro.html">
             
-                <a href="../hateoas/intro.html">
+                <a href="intro.html">
             
                     
                     intro
@@ -476,9 +476,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="../hateoas/negotation.html">
+        <li class="chapter active" data-level="1.11.2" data-path="negotation.html">
             
-                <a href="../hateoas/negotation.html">
+                <a href="negotation.html">
             
                     
                     negotiation
@@ -608,7 +608,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >input</a>
+        <a href=".." >negotiation</a>
     </h1>
 </div>
 
@@ -623,42 +623,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="input-is-strightforward"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>input is strightforward</h3>
-<pre><code>1 POST /moments/1/gift HTTP/1.1
-2 Host: api.example.com
-3 Authorization: Bearer vr5HmMkzlxKE70W1y4MibiJUusZwZC25NOVBEx3BD1
-4 Content-Type: application/json
-5 { &quot;user_id&quot; : 2 }&#x201D;
+                                <h3 id="negotiation"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>Negotiation</h3>
+<p>style1:
+/statuses/show.json?id=210462857140252672
+/statuses/show.xml?id=210462857140252672</p>
+<p>style2:
+/statuses/210462857140252672</p>
+<p>A simple example of content negotiation requesting JSON
+1 GET /places HTTP/1.1
+2 Host: localhost:8000
+3 Accept: application/json&#x201D;</p>
 
-
-Content-Type: application/json
-{
-  &quot;checkin&quot;: {
-    &quot;place_id&quot; : 1,
-    &quot;message&quot;: &quot;This is a bunch of text.&quot;,
-    &quot;with_friends&quot;: [1, 2, 3, 4, 5]
-  }
-}
-
-Content-Type: application/x-www-form-urlencoded
-checkin[place_id]=1&amp;checkin[message]=This is a bunch of
-text&amp;checkin[with_friends][]=\
-
-1&amp;checkin[with_friends][]=2&amp;checkin[with_friends][]=3&amp;checkin[with_friends][]=4&amp;check\
-in[with_friends][]=5
-</code></pre><h3 id="example"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>example</h3>
-<pre><code>RestClient::Request.execute(method: :get, url: &apos;http://example.com/resource&apos;,
-                            timeout: 10, headers: {params: {foo: &apos;bar&apos;}})
-</code></pre><h3 id="danger"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>danger</h3>
-<p>do not mix json and string</p>
-<pre><code>&#x201C;json=&quot;{
-     \&quot;checkin\&quot;: {
-         \&quot;place_id\&quot; : 1,
-         \&quot;message\&quot;: \&quot;This is a bunch of text.\&quot;,
-         \&quot;with_friends\&quot;: [1, 2, 3, 4, 5]
-     }
-}&#x201D;
-</code></pre>
                                 
                                 </section>
                             
@@ -685,12 +660,12 @@ in[with_friends][]=5
 
             
                 
-                <a href="../input-and-output.html" class="navigation navigation-prev " aria-label="Previous page: input and output">
+                <a href="intro.html" class="navigation navigation-prev " aria-label="Previous page: intro">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="output.html" class="navigation navigation-next " aria-label="Next page: output">
+                <a href="../version.html" class="navigation navigation-next " aria-label="Next page: version">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -701,7 +676,7 @@ in[with_friends][]=5
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"input","level":"1.3.1","depth":2,"next":{"title":"output","level":"1.3.2","depth":2,"path":"input-output/output.md","ref":"./input-output/output.md","articles":[]},"previous":{"title":"input and output","level":"1.3","depth":1,"path":"input-and-output.md","ref":"input-and-output.md","articles":[{"title":"input","level":"1.3.1","depth":2,"path":"input-output/input.md","ref":"./input-output/input.md","articles":[]},{"title":"output","level":"1.3.2","depth":2,"path":"input-output/output.md","ref":"./input-output/output.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","book-summary-scroll-position-saver","anchors","multipart","codeblock-filename","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"book-summary-scroll-position-saver":{},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"codeblock-filename":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"Soar <85624529@qq.com>","engines":{"gitbook":"*"},"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"build Apis","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Soar's Blog":"http://www.liuhaibao.com"}},"gitbook":"*","description":"This is a about how to write apis","extension":null},"file":{"path":"input-output/input.md","mtime":"2016-06-06T07:09:41.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-02T02:11:25.497Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"negotiation","level":"1.11.2","depth":2,"next":{"title":"version","level":"1.12","depth":1,"path":"version.md","ref":"version.md","articles":[{"title":"url","level":"1.12.1","depth":2,"path":"version/url.md","ref":"./version/url.md","articles":[]},{"title":"hostname","level":"1.12.2","depth":2,"path":"version/hostname.md","ref":"./version/hostname.md","articles":[]},{"title":"body","level":"1.12.3","depth":2,"path":"version/body.md","ref":"./version/body.md","articles":[]},{"title":"head","level":"1.12.4","depth":2,"path":"version/head.md","ref":"./version/head.md","articles":[]},{"title":"content","level":"1.12.5","depth":2,"path":"version/content.md","ref":"./version/content.md","articles":[]}]},"previous":{"title":"intro","level":"1.11.1","depth":2,"path":"hateoas/intro.md","ref":"./hateoas/intro.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","book-summary-scroll-position-saver","anchors","multipart","codeblock-filename","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"book-summary-scroll-position-saver":{},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"codeblock-filename":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"Soar <85624529@qq.com>","engines":{"gitbook":"*"},"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"build Apis","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Soar's Blog":"http://www.liuhaibao.com"}},"gitbook":"*","description":"This is a about how to write apis","extension":null},"file":{"path":"hateoas/negotation.md","mtime":"2016-06-04T06:16:51.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-02T02:11:25.497Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

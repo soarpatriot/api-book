@@ -2,7 +2,6 @@
 ###sigular or plural
 >>“Some developers decide to make all endpoints singular, but I take issue with this. Given /user/1 and /user, which user is that last one returning? Is it “me”? What about /place? It returns multiple? Confusing.”
 
->>摘录来自: Phil Sturgeon. “Build APIs You Won't Hate”。 iBooks. 
 
 
 ###plural
