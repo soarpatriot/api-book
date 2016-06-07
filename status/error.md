@@ -9,3 +9,11 @@
     "href": “http://example.com/docs/errors/#ERR-01234”
   }]
 }
+
+###twitter
+
+https://dev.twitter.com/overview/api/response-codes
+
+
+###JSON api 
+http://jsonapi.org/format/#errors
