@@ -1,28 +1,35 @@
 
-###relation try to avoid some 1+n problem
+###relations
 ```
 {
   "posts":[
     {
-     "id":12,
-     "title": "foo"
+      "id":12,
+      "title": "foo"
+      "comments":[...]
     },
     {
-     "id":13,
-     "title": "foo"
+      "id":13,
+      "title": "foo"
+      "comments":[...]
     }
 
    ]
 }
+```
+
+###try to avoid some 1+n problem
+```
 {
   
-  "post_id":12
   "data":[
     {
       "content": "sf"
+      "comment_id": 1
     },
     {
       "content": "dt"
+      "comment_id": 2
     }
   ]
     

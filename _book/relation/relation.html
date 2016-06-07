@@ -283,20 +283,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../status/code.html">
-            
-                <a href="../status/code.html">
-            
-                    
-                    code
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2" data-path="../status/error.html">
+        <li class="chapter " data-level="1.4.1" data-path="../status/error.html">
             
                 <a href="../status/error.html">
             
@@ -604,29 +591,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="relation-try-to-avoid-some-1n-problem"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>relation try to avoid some 1+n problem</h3>
+                                <h3 id="relations"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>relations</h3>
 <pre><code>{
   &quot;posts&quot;:[
     {
-     &quot;id&quot;:12,
-     &quot;title&quot;: &quot;foo&quot;
+      &quot;id&quot;:12,
+      &quot;title&quot;: &quot;foo&quot;
+      &quot;comments&quot;:[...]
     },
     {
-     &quot;id&quot;:13,
-     &quot;title&quot;: &quot;foo&quot;
+      &quot;id&quot;:13,
+      &quot;title&quot;: &quot;foo&quot;
+      &quot;comments&quot;:[...]
     }
 
    ]
 }
-{
+</code></pre><h3 id="try-to-avoid-some-1n-problem"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>try to avoid some 1+n problem</h3>
+<pre><code>{
 
-  &quot;post_id&quot;:12
   &quot;data&quot;:[
     {
       &quot;content&quot;: &quot;sf&quot;
+      &quot;comment_id&quot;: 1
     },
     {
       &quot;content&quot;: &quot;dt&quot;
+      &quot;comment_id&quot;: 2
     }
   ]
 
@@ -684,7 +675,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"relation","level":"1.6.1","depth":2,"next":{"title":"debug","level":"1.7","depth":1,"path":"debug.md","ref":"debug.md","articles":[]},"previous":{"title":"data relationsships","level":"1.6","depth":1,"path":"data-relationships.md","ref":"data-relationships.md","articles":[{"title":"relation","level":"1.6.1","depth":2,"path":"relation/relation.md","ref":"./relation/relation.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","book-summary-scroll-position-saver","anchors","multipart","codeblock-filename","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"book-summary-scroll-position-saver":{},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"codeblock-filename":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"Soar <85624529@qq.com>","engines":{"gitbook":"*"},"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"build Apis","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Soar's Blog":"http://www.liuhaibao.com"}},"gitbook":"*","description":"This is a about how to write apis","extension":null},"file":{"path":"relation/relation.md","mtime":"2016-06-02T05:53:57.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-07T00:45:24.121Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"relation","level":"1.6.1","depth":2,"next":{"title":"debug","level":"1.7","depth":1,"path":"debug.md","ref":"debug.md","articles":[]},"previous":{"title":"data relationsships","level":"1.6","depth":1,"path":"data-relationships.md","ref":"data-relationships.md","articles":[{"title":"relation","level":"1.6.1","depth":2,"path":"relation/relation.md","ref":"./relation/relation.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","book-summary-scroll-position-saver","anchors","multipart","codeblock-filename","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"book-summary-scroll-position-saver":{},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"codeblock-filename":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"Soar <85624529@qq.com>","engines":{"gitbook":"*"},"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"build Apis","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Soar's Blog":"http://www.liuhaibao.com"}},"gitbook":"*","description":"This is a about how to write apis","extension":null},"file":{"path":"relation/relation.md","mtime":"2016-06-07T08:13:27.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-07T00:45:24.121Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

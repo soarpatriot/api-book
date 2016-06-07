@@ -10,7 +10,6 @@
   * [input](./input-output/input.md)
   * [output](./input-output/output.md)
 * [status](status.md)
-  * [code](./status/code.md)
   * [error](./status/error.md)
 * [test](test.md)
 * [data relationsships](data-relationships.md)

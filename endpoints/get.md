@@ -10,5 +10,5 @@
 ```
 /users/1/firends/2   
 ```
-it's not the recommended way for it is route to deep
+it's not the recommended way for it is route too deep
 

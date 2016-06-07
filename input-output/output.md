@@ -7,6 +7,7 @@ Did you notice these?
 2. Content-Type: application/xml
 
 ### Namespace
+```
 {
   "data": {
     "name": "Phil Sturgeon",
@@ -23,5 +24,7 @@ Did you notice these?
       "name": "Phil Sturgeon",
       "id": "511501255"
     }
+  ]
 }
 
+```
