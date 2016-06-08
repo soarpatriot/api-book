@@ -13,16 +13,10 @@ process
 ```
 3.OAuth1
 
-```
-(1) request   request token 
-(2) request   access token 
-(3) request resource with access token
-```
+![image](https://github.com/soarpatriot/api-book/raw/master/images/oauth1.jpg)
+
 
 4.OAuth2
 
-```
-(1) request   authrizon code
-(2) request   access token 
-(2) request   resource 
-```
+![image](https://github.com/soarpatriot/api-book/raw/master/images/oauth2.jpg)
+
