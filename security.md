@@ -22,7 +22,7 @@ process
 
 ### reality 
 
-1.some similar with oauth1  example: some taobao apis
+1.sign auth  example: some taobao apis
 ```
   sign = md5(api_key + api_secret + sorted_params + timestamp)
   send params:  sorted_params, timestamp, api_key, sign
