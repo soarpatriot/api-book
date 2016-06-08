@@ -73,7 +73,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="security/http.html" />
+    <link rel="next" href="pagination.html" />
     
     
     <link rel="prev" href="debug.html" />
@@ -370,25 +370,6 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.8.1" data-path="security/http.html">
-            
-                <a href="security/http.html">
-            
-                    
-                    security
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
         </li>
     
         <li class="chapter " data-level="1.9" data-path="pagination.html">
@@ -591,8 +572,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="api-security"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>Api security</h3>
-
+                                <h3 id="api-security-styles"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>Api security styles</h3>
+<ol>
+<li>http basic
+Never use it, even over https</li>
+<li>Digest Authentication
+HA1 = MD5(username:realm:password) </li>
+</ol>
+<pre><code>it still requires the username and password to be sent repeatedly, meaning it
+is potentially hackable if the hacker has enough encrypted requests available to
+process
+</code></pre><p>3.OAuth1</p>
+<p><img src="https://raw.githubusercontent.com/soarpatriot/api-book/master/images/oauth1.png" alt="image"></p>
+<p>4.OAuth2</p>
+<p><img src="https://raw.githubusercontent.com/soarpatriot/api-book/master/images/oauth2.png" alt="image"></p>
+<h3 id="reality"><a name="undefined" class="plugin-anchor" href="#undefined"><span class="fa fa-link"></span></a>reality</h3>
+<p>1.some similar with oauth1  example: some taobao apis</p>
+<pre><code>  sign = md5(api_key + api_secret + sorted_params + timestamp)
+  send params:  sorted_params, timestamp, api_key, sign
+</code></pre><p>2.some similar oauth2 </p>
+<pre><code>  pre: use https 
+  request with: api_key, api_secret,  response:  access_token, refresh_token, expired_at
+  use access_token get the resource
+</code></pre>
                                 
                                 </section>
                             
@@ -624,7 +626,7 @@
                 </a>
                 
                 
-                <a href="security/http.html" class="navigation navigation-next " aria-label="Next page: security">
+                <a href="pagination.html" class="navigation navigation-next " aria-label="Next page: pagination">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -635,7 +637,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"security","level":"1.8","depth":1,"next":{"title":"security","level":"1.8.1","depth":2,"path":"security/http.md","ref":"./security/http.md","articles":[]},"previous":{"title":"debug","level":"1.7","depth":1,"path":"debug.md","ref":"debug.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","book-summary-scroll-position-saver","anchors","multipart","codeblock-filename","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"book-summary-scroll-position-saver":{},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"codeblock-filename":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"Soar <85624529@qq.com>","engines":{"gitbook":"*"},"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"build Apis","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Soar's Blog":"http://www.liuhaibao.com"}},"gitbook":"*","description":"This is a about how to write apis","extension":null},"file":{"path":"security.md","mtime":"2016-05-31T10:04:34.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-08T02:34:27.159Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"security","level":"1.8","depth":1,"next":{"title":"pagination","level":"1.9","depth":1,"path":"pagination.md","ref":"pagination.md","articles":[]},"previous":{"title":"debug","level":"1.7","depth":1,"path":"debug.md","ref":"debug.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","book-summary-scroll-position-saver","anchors","multipart","codeblock-filename","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"book-summary-scroll-position-saver":{},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"codeblock-filename":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"Soar <85624529@qq.com>","engines":{"gitbook":"*"},"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"build Apis","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Soar's Blog":"http://www.liuhaibao.com"}},"gitbook":"*","description":"This is a about how to write apis","extension":null},"file":{"path":"security.md","mtime":"2016-06-08T02:57:20.000Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-08T02:34:27.159Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

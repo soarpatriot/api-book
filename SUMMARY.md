@@ -16,7 +16,6 @@
   * [relation](./relation/relation.md)
 * [debug](debug.md)
 * [security](security.md)
-  * [security](./security/http.md)
 * [pagination](pagination.md)
 * [document](document.md)
 * [hateoas](hateoas.md)
